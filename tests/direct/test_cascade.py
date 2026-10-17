@@ -41,9 +41,8 @@ def mock(vm, name, decision=None, body=None, audit=True, status=200):
 
 
 def deploy(factory, accounts, election='SURPLUS', weights=(6, 1, 2), seats=2, candidates=None):
-    voters = [{'id': 'voter-' + chr(97+i), 'address': '0x' + a.hex(), 'weight': weights[i]} for i, a in enumerate(accounts)]
     return factory(str(ROOT / 'contracts/quota_cascade.py'), PUBLISHER, election,
-                   json.dumps(candidates or CANDIDATES), json.dumps(voters), seats)
+                   candidates or CANDIDATES, ['voter-' + chr(97+i) for i in range(len(accounts))], list(accounts), list(weights), seats)
 
 
 @pytest.fixture
@@ -277,3 +276,16 @@ def test_tie_breaking_zero_support_exhaustion_and_multi_surplus():
 def test_constructor_seats(direct_deploy, accounts, seats):
     with pytest.raises(Exception, match='Invalid seats'):
         deploy(direct_deploy, accounts, seats=seats)
+
+
+def test_constructor_accepts_actual_calldata_address_objects(direct_deploy, accounts, monkeypatch):
+    from gltest.direct import loader
+    original = loader._allocate_contract
+    def allocate(cls, vm, *args, **kwargs):
+        from genlayer import Address
+        native = list(args)
+        native[4] = [Address(a) for a in native[4]]
+        return original(cls, vm, *native, **kwargs)
+    monkeypatch.setattr(loader, '_allocate_contract', allocate)
+    c = deploy(direct_deploy, accounts)
+    assert [v['address'] for v in c.get_state()['voters']] == ['0x' + a.hex() for a in accounts]

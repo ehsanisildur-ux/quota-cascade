@@ -178,25 +178,25 @@ class QuotaCascade(gl.Contract):
     result: str
     voter_ids: DynArray[str]
 
-    def __init__(self, publisher: str, election: str, candidates_json: str, voters_json: str, seats: int):
+    def __init__(self, publisher: str, election: str, candidates: list[str], voter_ids: list[str], accounts: list[Address], weights: list[int], seats: int):
         if not isinstance(publisher, str) or not re.fullmatch(r'[A-Za-z0-9-]+/[a-z0-9-]+', publisher) or not isinstance(election, str) or not re.fullmatch(r'[A-Z0-9-]{1,32}', election):
             fail('[EXPECTED] Invalid publisher or election')
-        candidates, voters = parse(candidates_json, '[EXPECTED]'), parse(voters_json, '[EXPECTED]')
         if not isinstance(candidates, list) or not 3 <= len(candidates) <= 5 or any(not isinstance(c, str) or not re.fullmatch(r'[a-z][a-z0-9-]{0,23}', c) for c in candidates) or len(set(candidates)) != len(candidates):
             fail('[EXPECTED] Three to five unique candidates required')
         if type(seats) is not int or not 1 <= seats <= min(3, len(candidates) - 1):
             fail('[EXPECTED] Invalid seats')
-        if not isinstance(voters, list) or not 1 <= len(voters) <= 8:
+        if not isinstance(voter_ids, list) or not 1 <= len(voter_ids) <= 8 or not isinstance(accounts, list) or not isinstance(weights, list) or len(accounts) != len(voter_ids) or len(weights) != len(voter_ids):
             fail('[EXPECTED] One to eight voters required')
         seen, ids = [], []
-        for row in voters:
-            if not isinstance(row, dict) or set(row) != {'id', 'address', 'weight'} or not isinstance(row['id'], str) or not re.fullmatch(r'[a-z][a-z0-9-]{0,23}', row['id']) or row['id'] in ids or not isinstance(row['address'], str) or not re.fullmatch(r'0x[0-9a-fA-F]{40}', row['address']) or row['address'].lower() == '0x' + '0' * 40 or row['address'].lower() in seen or type(row['weight']) is not int or not 1 <= row['weight'] <= 20:
+        for identity, address, weight in zip(voter_ids, accounts, weights):
+            address = address.as_bytes if isinstance(address, Address) else address
+            if not isinstance(identity, str) or not re.fullmatch(r'[a-z][a-z0-9-]{0,23}', identity) or identity in ids or not isinstance(address, bytes) or len(address) != 20 or address == bytes(20) or address in seen or type(weight) is not int or not 1 <= weight <= 20:
                 fail('[EXPECTED] Invalid weighted voter')
-            seen.append(row['address'].lower())
-            ids.append(row['id'])
-            self.voter_ids.append(row['id'])
-            self.voters.append(Address(row['address']))
-            self.powers.append(row['weight'])
+            seen.append(address)
+            ids.append(identity)
+            self.voter_ids.append(identity)
+            self.voters.append(Address(address))
+            self.powers.append(weight)
             self.ballots.append(json.dumps({'status': 'PENDING'}))
         self.publisher, self.election, self.seats, self.result = publisher, election, seats, ''
         for candidate in candidates:

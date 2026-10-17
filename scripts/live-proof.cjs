@@ -16,7 +16,7 @@ async function main(){
   }
   const voters=accounts.slice(0,3).map((a,i)=>({id:'voter-'+String.fromCharCode(97+i),address:a.address,weight:test.weights[i]}));
   process.env.CASCADE_ACCOUNT=accounts[0].name;
-  const deployHash=await invoke(name+'-deployment',['deploy','--contract','contracts/quota_cascade.py','--args',publisher,election,JSON.stringify(candidates),JSON.stringify(voters),String(test.seats)]);
+  const deployHash=await invoke(name+'-deployment',['deploy','--contract','contracts/quota_cascade.py','--args',publisher,election,JSON.stringify(candidates),JSON.stringify(voters.map(v=>v.id)),JSON.stringify(voters.map(v=>v.address)),JSON.stringify(test.weights),String(test.seats)]);
   const r=await receipt(name+'-deployment',deployHash,true),contract=r.to_address||r.recipient;
   assert(/^0x[a-f0-9]{40}$/i.test(contract),'Deployment address');
   assert(fs.readFileSync(path.join(root,'contracts/quota_cascade.py')).equals(Buffer.from(await rpc('gen_getContractCode',[contract]),'base64')),'Exact deployed source');

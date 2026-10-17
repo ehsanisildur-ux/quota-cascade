@@ -2,7 +2,7 @@
 
 ## Public workflow
 
-`QuotaCascade(publisher, election, candidates_json, voters_json, seats)` fixes the rules. Voter rows are `{id,address,weight}` with unique IDs and nonzero unique addresses. Weights are integers 1–20. No administrator or mutable roster exists.
+`QuotaCascade(publisher, election, candidates, voter_ids, accounts, weights, seats)` fixes the rules. The three voter arrays have equal length and matching positions, with unique IDs and nonzero unique native Address values. Weights are integers 1–20. Native typed arrays avoid CLI JSON-to-address coercion inside string parameters. No administrator or mutable roster exists.
 
 `cast(url,sha256)` is admitted-wallet-only, once per voter. The URL must name `ballots/*.json` at a full 40-character Git commit inside the frozen repository. Complete UTF-8 bytes (at most 8000) must match SHA-256. JSON rejects duplicate keys and binds election and voter ID. Only prose paragraphs contain preference information; callers never provide machine-readable rankings.
 
