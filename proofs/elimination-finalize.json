@@ -1,0 +1,290 @@
+{
+  "contract": "0xaD73DD1D4203f490EBA5f2a80d392a92Efa9358f",
+  "transaction": "0x0760615b70778d5576772c8659342aceab3b0f6f7648e2fbc714bc393c86b26a",
+  "sender": "0x5a405dde1531786a9cc0ee57280b462caa2e282f",
+  "success": true,
+  "reason": null,
+  "args": [
+    "write",
+    "0xaD73DD1D4203f490EBA5f2a80d392a92Efa9358f",
+    "finalize"
+  ],
+  "state_before": {
+    "candidates": [
+      "amber",
+      "birch",
+      "cedar"
+    ],
+    "election": "ELIMINATION",
+    "publisher": "ehsanisildur-ux/quota-cascade",
+    "result": null,
+    "seats": 1,
+    "voters": [
+      {
+        "address": "0x67f9f80e80556f5e3648b71588e73d32d7fcd86e",
+        "ballot": {
+          "decision": {
+            "order": [
+              "amber"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "290aefceda65f0484c6d6ce7427b97542e98873a6e2713b2a034b8483ffca000",
+          "source": {
+            "election": "ELIMINATION",
+            "paragraphs": [
+              "My final preference is amber alone. I reject birch and cedar; if amber is eliminated, my vote must have no further preference."
+            ],
+            "voter": "voter-a"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/elimination-a.json"
+        },
+        "id": "voter-a",
+        "weight": 4
+      },
+      {
+        "address": "0xf22b5f190441205eee8497ada0c28d4895028491",
+        "ballot": {
+          "decision": {
+            "order": [
+              "birch",
+              "amber",
+              "cedar"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "15f1f75981f25d9ed7ce4193ba7dd884255686e2271d78c35016906c6ff42227",
+          "source": {
+            "election": "ELIMINATION",
+            "paragraphs": [
+              "An old draft said amber first. That draft is withdrawn. My final complete ranking is birch first, amber second, cedar third."
+            ],
+            "voter": "voter-b"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/elimination-b.json"
+        },
+        "id": "voter-b",
+        "weight": 3
+      },
+      {
+        "address": "0x772feef9272ddec1ed9796e62e9344c65da912ce",
+        "ballot": {
+          "decision": {
+            "order": [
+              "cedar",
+              "birch",
+              "amber"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "eab1ff4f8a0cc77ef0ad57b09185199dfafe0cf4da23f5d278c6d10e14e02729",
+          "source": {
+            "election": "ELIMINATION",
+            "paragraphs": [
+              "My colleague prefers amber, then cedar. That is not my vote. My own final ranking is cedar first, birch second, amber third."
+            ],
+            "voter": "voter-c"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/elimination-c.json"
+        },
+        "id": "voter-c",
+        "weight": 2
+      }
+    ]
+  },
+  "state": {
+    "candidates": [
+      "amber",
+      "birch",
+      "cedar"
+    ],
+    "election": "ELIMINATION",
+    "publisher": "ehsanisildur-ux/quota-cascade",
+    "result": {
+      "quota": 5,
+      "rounds": [
+        {
+          "action": "ELIMINATE",
+          "active_after": [
+            9,
+            1
+          ],
+          "candidate": 2,
+          "continuing": [
+            0,
+            1
+          ],
+          "exhausted_after": [
+            0,
+            1
+          ],
+          "exhausted_before": [
+            0,
+            1
+          ],
+          "locked_this_round": [
+            0,
+            1
+          ],
+          "retained": [
+            0,
+            1
+          ],
+          "tallies": [
+            [
+              4,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "transfer_factor": [
+            1,
+            1
+          ]
+        },
+        {
+          "action": "ELECT_QUOTA",
+          "active_after": [
+            4,
+            1
+          ],
+          "candidate": 1,
+          "continuing": [
+            0
+          ],
+          "exhausted_after": [
+            0,
+            1
+          ],
+          "exhausted_before": [
+            0,
+            1
+          ],
+          "locked_this_round": [
+            5,
+            1
+          ],
+          "retained": [
+            5,
+            1
+          ],
+          "tallies": [
+            [
+              4,
+              1
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "transfer_factor": [
+            0,
+            1
+          ]
+        }
+      ],
+      "status": "COUNTED",
+      "total": 9,
+      "winners": [
+        1
+      ]
+    },
+    "seats": 1,
+    "voters": [
+      {
+        "address": "0x67f9f80e80556f5e3648b71588e73d32d7fcd86e",
+        "ballot": {
+          "decision": {
+            "order": [
+              "amber"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "290aefceda65f0484c6d6ce7427b97542e98873a6e2713b2a034b8483ffca000",
+          "source": {
+            "election": "ELIMINATION",
+            "paragraphs": [
+              "My final preference is amber alone. I reject birch and cedar; if amber is eliminated, my vote must have no further preference."
+            ],
+            "voter": "voter-a"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/elimination-a.json"
+        },
+        "id": "voter-a",
+        "weight": 4
+      },
+      {
+        "address": "0xf22b5f190441205eee8497ada0c28d4895028491",
+        "ballot": {
+          "decision": {
+            "order": [
+              "birch",
+              "amber",
+              "cedar"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "15f1f75981f25d9ed7ce4193ba7dd884255686e2271d78c35016906c6ff42227",
+          "source": {
+            "election": "ELIMINATION",
+            "paragraphs": [
+              "An old draft said amber first. That draft is withdrawn. My final complete ranking is birch first, amber second, cedar third."
+            ],
+            "voter": "voter-b"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/elimination-b.json"
+        },
+        "id": "voter-b",
+        "weight": 3
+      },
+      {
+        "address": "0x772feef9272ddec1ed9796e62e9344c65da912ce",
+        "ballot": {
+          "decision": {
+            "order": [
+              "cedar",
+              "birch",
+              "amber"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "eab1ff4f8a0cc77ef0ad57b09185199dfafe0cf4da23f5d278c6d10e14e02729",
+          "source": {
+            "election": "ELIMINATION",
+            "paragraphs": [
+              "My colleague prefers amber, then cedar. That is not my vote. My own final ranking is cedar first, birch second, amber third."
+            ],
+            "voter": "voter-c"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/elimination-c.json"
+        },
+        "id": "voter-c",
+        "weight": 2
+      }
+    ]
+  }
+}

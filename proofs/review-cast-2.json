@@ -1,0 +1,165 @@
+{
+  "contract": "0xD05480abD6c65E4e27C28452a1E4220bC8E9f18c",
+  "transaction": "0xdf8a106264071acd7b70dc804be829f11ec663019d3868b2069eff8b5255d789",
+  "sender": "0x772feef9272ddec1ed9796e62e9344c65da912ce",
+  "success": true,
+  "reason": null,
+  "args": [
+    "write",
+    "0xD05480abD6c65E4e27C28452a1E4220bC8E9f18c",
+    "cast",
+    "--args",
+    "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/review-c.json",
+    "5f8685cf99f74b2c27bdd87f9da021c6d3915d1b153d4d22c3036c343a2cb81a"
+  ],
+  "state_before": {
+    "candidates": [
+      "amber",
+      "birch",
+      "cedar"
+    ],
+    "election": "REVIEW",
+    "publisher": "ehsanisildur-ux/quota-cascade",
+    "result": null,
+    "seats": 1,
+    "voters": [
+      {
+        "address": "0x67f9f80e80556f5e3648b71588e73d32d7fcd86e",
+        "ballot": {
+          "decision": {
+            "order": [],
+            "paragraph": 0,
+            "status": "REVIEW"
+          },
+          "sha256": "4cac4b283d4891fe3020e51fcef7d872dcc8c0284957fa4b87d037d11480bb49",
+          "source": {
+            "election": "REVIEW",
+            "paragraphs": [
+              "Amber and birch are tied as my joint first choices. Cedar is below both. I have not chosen any tie-break between amber and birch."
+            ],
+            "voter": "voter-a"
+          },
+          "status": "REVIEW",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/review-a.json"
+        },
+        "id": "voter-a",
+        "weight": 6
+      },
+      {
+        "address": "0xf22b5f190441205eee8497ada0c28d4895028491",
+        "ballot": {
+          "decision": {
+            "order": [
+              "birch",
+              "cedar"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "838d7e2e4dfca9aebf2138ef64f21d6c0b07e369e1a650577550440155bff43b",
+          "source": {
+            "election": "REVIEW",
+            "paragraphs": [
+              "I rank birch first and cedar second. I explicitly reject amber. My ranking has no ties and no other acceptable candidates."
+            ],
+            "voter": "voter-b"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/review-b.json"
+        },
+        "id": "voter-b",
+        "weight": 1
+      },
+      {
+        "address": "0x772feef9272ddec1ed9796e62e9344c65da912ce",
+        "ballot": {
+          "status": "PENDING"
+        },
+        "id": "voter-c",
+        "weight": 2
+      }
+    ]
+  },
+  "state": {
+    "candidates": [
+      "amber",
+      "birch",
+      "cedar"
+    ],
+    "election": "REVIEW",
+    "publisher": "ehsanisildur-ux/quota-cascade",
+    "result": null,
+    "seats": 1,
+    "voters": [
+      {
+        "address": "0x67f9f80e80556f5e3648b71588e73d32d7fcd86e",
+        "ballot": {
+          "decision": {
+            "order": [],
+            "paragraph": 0,
+            "status": "REVIEW"
+          },
+          "sha256": "4cac4b283d4891fe3020e51fcef7d872dcc8c0284957fa4b87d037d11480bb49",
+          "source": {
+            "election": "REVIEW",
+            "paragraphs": [
+              "Amber and birch are tied as my joint first choices. Cedar is below both. I have not chosen any tie-break between amber and birch."
+            ],
+            "voter": "voter-a"
+          },
+          "status": "REVIEW",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/review-a.json"
+        },
+        "id": "voter-a",
+        "weight": 6
+      },
+      {
+        "address": "0xf22b5f190441205eee8497ada0c28d4895028491",
+        "ballot": {
+          "decision": {
+            "order": [
+              "birch",
+              "cedar"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "838d7e2e4dfca9aebf2138ef64f21d6c0b07e369e1a650577550440155bff43b",
+          "source": {
+            "election": "REVIEW",
+            "paragraphs": [
+              "I rank birch first and cedar second. I explicitly reject amber. My ranking has no ties and no other acceptable candidates."
+            ],
+            "voter": "voter-b"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/review-b.json"
+        },
+        "id": "voter-b",
+        "weight": 1
+      },
+      {
+        "address": "0x772feef9272ddec1ed9796e62e9344c65da912ce",
+        "ballot": {
+          "decision": {
+            "order": [],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "5f8685cf99f74b2c27bdd87f9da021c6d3915d1b153d4d22c3036c343a2cb81a",
+          "source": {
+            "election": "REVIEW",
+            "paragraphs": [
+              "I explicitly reject amber, birch and cedar. I authorize no preference for any candidate in this election; my ballot has an empty ranking."
+            ],
+            "voter": "voter-c"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/review-c.json"
+        },
+        "id": "voter-c",
+        "weight": 2
+      }
+    ]
+  }
+}

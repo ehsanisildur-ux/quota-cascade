@@ -1,0 +1,231 @@
+{
+  "source_sha256": "b5260c35d4d1dac51a5288b879e7eaf0c7e212cde644a4148329df72d1105907",
+  "mode": "fresh-rpc-and-state",
+  "contracts": [
+    {
+      "name": "surplus",
+      "contract": "0xD6C5bB56eb2a8feb414EC8c2f8458514eB707526",
+      "winners": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "elimination",
+      "contract": "0xaD73DD1D4203f490EBA5f2a80d392a92Efa9358f",
+      "winners": [
+        1
+      ]
+    },
+    {
+      "name": "review",
+      "contract": "0xD05480abD6c65E4e27C28452a1E4220bC8E9f18c",
+      "winners": [
+        1
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "label": "surplus-deployment",
+      "hash": "0x08ff82d429d2b806ffa2ad945c30b31fedda1a0e3506e4deb5b41ec2ee187715",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "unauthorized",
+      "hash": "0x4659765a56c4c9741b249c7bd5ab85b90f4ea1bf1b455256fadb1c75190f0ce9",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "bad-hash",
+      "hash": "0x3b7a3f91fb9923d33cc4d5a9d19105146b7cf21eb9bad7ed06630a3a38a9a5c0",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "surplus-cast-0",
+      "hash": "0x8e3a6cf83b7bc8f84c1476f07f8bd6cb7d4329fa2ba9b6b9345f47d4925378e8",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "surplus-cast-1",
+      "hash": "0x50ee7f00ca7ea064d58caaeae0c34ea347a6d6cbbc4446c2b2eec8ed56e93540",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "surplus-cast-2",
+      "hash": "0x402739f2069e91e728124f6cddd8d05d3820dfc22ef5837e40784e5eb2150f81",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "duplicate",
+      "hash": "0x9ba08eefb5cc69cee909d8bce1bc9c5a970a4c65be2b4bf56e51374af5f3c9dd",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 5,
+      "disagree": 0,
+      "idle": 0
+    },
+    {
+      "label": "surplus-finalize",
+      "hash": "0x06ee9c4f89a946b47bddb8f6c991a5902821b9610157f09c5bcd3547ca9e2a45",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "elimination-deployment",
+      "hash": "0xb047e15c84ad8be63816a3cf5e495918bde7460836ac5d7a12c8a6edf18be4f2",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "elimination-cast-0",
+      "hash": "0xe085d0e8fa32aae2e9ff7e31649dcea7516f21d2ccc33ebe2fb47baf6ae87dcb",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "elimination-cast-1",
+      "hash": "0x5d4e3ea20b8802acc7b34cbc46fb9c3ceee7631f8d2577b0b66c975a409203ab",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "elimination-cast-2",
+      "hash": "0x6f62d41af56af410a09194ee7d9c9aa61a6ea957b5310d48dc3c7af2cc22d93e",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "elimination-finalize",
+      "hash": "0x0760615b70778d5576772c8659342aceab3b0f6f7648e2fbc714bc393c86b26a",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "review-deployment",
+      "hash": "0x9462e1831f392b80ca23c9db32b234f23c706050df034976c037a7961ddd3306",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "review-cast-0",
+      "hash": "0x8b6b541b79385dc56edfd1d0eb05d2b27bfd67dda2663dea2e859e41fabe9c36",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "review-cast-1",
+      "hash": "0x9eb5210b64fb824ff476f7d78d16eb51259285168ff99a83ec54db066f35fc68",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "review-cast-2",
+      "hash": "0xdf8a106264071acd7b70dc804be829f11ec663019d3868b2069eff8b5255d789",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "review-blocked",
+      "hash": "0x98b2dd80bea2c81d6fa1ac5419c3850b1665c4eb7dc8d693ebb0abd642b68c5c",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "review-abstain",
+      "hash": "0x1b1842ad4d81280b1581a2d390cd1e294d7217a446ed74c0dc32b07d931b0233",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    },
+    {
+      "label": "review-finalize",
+      "hash": "0x5b6509e0d2e59be7135efbc26e8b1a42445f127a74a3f63d679b60d2f949db24",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "MAJORITY_AGREE",
+      "agree": 3,
+      "disagree": 0,
+      "idle": 2
+    }
+  ],
+  "live_state_match": true
+}

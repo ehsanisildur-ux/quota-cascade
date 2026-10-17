@@ -2,6 +2,8 @@
 
 Source-grounded ranked ballots become an exact, auditable multi-seat election.
 
+Deployed on gasless StudioNet: **`0xD6C5bB56eb2a8feb414EC8c2f8458514eB707526`**. [Deployment](https://explorer-studio.genlayer.com/tx/0x08ff82d429d2b806ffa2ad945c30b31fedda1a0e3506e4deb5b41ec2ee187715) · [Three counted elections and 20 finalized consensus receipts](proofs/README.md) · [Passing proof workflow](https://github.com/ehsanisildur-ux/quota-cascade/actions/runs/39040150971).
+
 QuotaCascade is a standalone GenLayer voting primitive. A deployment freezes 3–5 candidate IDs, 1–8 voter wallets with fixed weights, 1–3 seats, an election ID and a publisher repository. Each admitted wallet submits one commit-pinned prose ballot. The contract downloads full bytes, verifies SHA-256 and binds the statement to that wallet's immutable voter ID and election. A publisher cannot cast a ballot on a voter's behalf.
 
 The leader extracts the voter's final strict ranking. Validators independently fetch the full statement, derive their own ranking and require exact status/order agreement. They also audit every omission and source anchor. Quoted opinions, withdrawn drafts, ties and missing comparisons receive explicit treatment. REVIEW cannot participate in counting: the voter must explicitly abstain, preserving the original statement and decision. Valid submitted rankings are immutable.

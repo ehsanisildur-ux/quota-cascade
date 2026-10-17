@@ -1,0 +1,195 @@
+{
+  "contract": "0xD6C5bB56eb2a8feb414EC8c2f8458514eB707526",
+  "transaction": "0x9ba08eefb5cc69cee909d8bce1bc9c5a970a4c65be2b4bf56e51374af5f3c9dd",
+  "sender": "0x67f9f80e80556f5e3648b71588e73d32d7fcd86e",
+  "success": false,
+  "reason": "[EXPECTED] Ballot already submitted",
+  "args": [
+    "write",
+    "0xD6C5bB56eb2a8feb414EC8c2f8458514eB707526",
+    "cast",
+    "--args",
+    "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-a.json",
+    "1c857aa025fe1223414612401a6dab73cea5b6bdafb6981e53894600ad69cb92"
+  ],
+  "state_before": {
+    "candidates": [
+      "amber",
+      "birch",
+      "cedar"
+    ],
+    "election": "SURPLUS",
+    "publisher": "ehsanisildur-ux/quota-cascade",
+    "result": null,
+    "seats": 2,
+    "voters": [
+      {
+        "address": "0x67f9f80e80556f5e3648b71588e73d32d7fcd86e",
+        "ballot": {
+          "decision": {
+            "order": [
+              "amber",
+              "birch",
+              "cedar"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "1c857aa025fe1223414612401a6dab73cea5b6bdafb6981e53894600ad69cb92",
+          "source": {
+            "election": "SURPLUS",
+            "paragraphs": [
+              "My final ballot ranks amber first, birch second, and cedar third. All three candidates are acceptable to me in exactly that strict order."
+            ],
+            "voter": "voter-a"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-a.json"
+        },
+        "id": "voter-a",
+        "weight": 6
+      },
+      {
+        "address": "0xf22b5f190441205eee8497ada0c28d4895028491",
+        "ballot": {
+          "decision": {
+            "order": [
+              "birch",
+              "cedar",
+              "amber"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "b0ea9e88a3fecec0f3a2a7318808bef59daf2f475907a48706f5d65746376dae",
+          "source": {
+            "election": "SURPLUS",
+            "paragraphs": [
+              "For my own final vote I prefer birch, followed by cedar, followed by amber. This is my complete strict ranking of all candidates."
+            ],
+            "voter": "voter-b"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-b.json"
+        },
+        "id": "voter-b",
+        "weight": 1
+      },
+      {
+        "address": "0x772feef9272ddec1ed9796e62e9344c65da912ce",
+        "ballot": {
+          "decision": {
+            "order": [
+              "cedar",
+              "birch"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "9c0b956007218c29d69fc710f5d75dcf2c9d298fd51c1cf43612c7cd045fd02a",
+          "source": {
+            "election": "SURPLUS",
+            "paragraphs": [
+              "I rank cedar first and birch second for this election. I explicitly reject amber and do not want any vote transferred to amber."
+            ],
+            "voter": "voter-c"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-c.json"
+        },
+        "id": "voter-c",
+        "weight": 2
+      }
+    ]
+  },
+  "state": {
+    "candidates": [
+      "amber",
+      "birch",
+      "cedar"
+    ],
+    "election": "SURPLUS",
+    "publisher": "ehsanisildur-ux/quota-cascade",
+    "result": null,
+    "seats": 2,
+    "voters": [
+      {
+        "address": "0x67f9f80e80556f5e3648b71588e73d32d7fcd86e",
+        "ballot": {
+          "decision": {
+            "order": [
+              "amber",
+              "birch",
+              "cedar"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "1c857aa025fe1223414612401a6dab73cea5b6bdafb6981e53894600ad69cb92",
+          "source": {
+            "election": "SURPLUS",
+            "paragraphs": [
+              "My final ballot ranks amber first, birch second, and cedar third. All three candidates are acceptable to me in exactly that strict order."
+            ],
+            "voter": "voter-a"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-a.json"
+        },
+        "id": "voter-a",
+        "weight": 6
+      },
+      {
+        "address": "0xf22b5f190441205eee8497ada0c28d4895028491",
+        "ballot": {
+          "decision": {
+            "order": [
+              "birch",
+              "cedar",
+              "amber"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "b0ea9e88a3fecec0f3a2a7318808bef59daf2f475907a48706f5d65746376dae",
+          "source": {
+            "election": "SURPLUS",
+            "paragraphs": [
+              "For my own final vote I prefer birch, followed by cedar, followed by amber. This is my complete strict ranking of all candidates."
+            ],
+            "voter": "voter-b"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-b.json"
+        },
+        "id": "voter-b",
+        "weight": 1
+      },
+      {
+        "address": "0x772feef9272ddec1ed9796e62e9344c65da912ce",
+        "ballot": {
+          "decision": {
+            "order": [
+              "cedar",
+              "birch"
+            ],
+            "paragraph": 0,
+            "status": "RANKED"
+          },
+          "sha256": "9c0b956007218c29d69fc710f5d75dcf2c9d298fd51c1cf43612c7cd045fd02a",
+          "source": {
+            "election": "SURPLUS",
+            "paragraphs": [
+              "I rank cedar first and birch second for this election. I explicitly reject amber and do not want any vote transferred to amber."
+            ],
+            "voter": "voter-c"
+          },
+          "status": "RANKED",
+          "url": "https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-c.json"
+        },
+        "id": "voter-c",
+        "weight": 2
+      }
+    ]
+  }
+}

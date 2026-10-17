@@ -1,0 +1,170 @@
+{
+  "hash": "0x9ba08eefb5cc69cee909d8bce1bc9c5a970a4c65be2b4bf56e51374af5f3c9dd",
+  "from_address": "0x67f9F80e80556f5E3648B71588e73D32d7Fcd86e",
+  "to_address": "0xD6C5bB56eb2a8feb414EC8c2f8458514eB707526",
+  "data": {
+    "calldata": {
+      "readable": "{\"args\":[\"https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-a.json\",\"1c857aa025fe1223414612401a6dab73cea5b6bdafb6981e53894600ad69cb92\",]\"method\":\"cast\"}"
+    }
+  },
+  "status": 7,
+  "result": 6,
+  "consensus_data": {
+    "votes": {
+      "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1": "agree",
+      "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e": "agree",
+      "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6": "agree",
+      "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004": "agree",
+      "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21": "agree"
+    },
+    "leader_receipt": [
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "leader",
+        "vote": null,
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-a.json\",\"1c857aa025fe1223414612401a6dab73cea5b6bdafb6981e53894600ad69cb92\",]\"method\":\"cast\"}"
+        },
+        "eq_outputs": {},
+        "result": {
+          "status": "rollback",
+          "payload": "[EXPECTED] Ballot already submitted"
+        }
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree",
+        "calldata": {
+          "readable": "{\"args\":[\"https://raw.githubusercontent.com/ehsanisildur-ux/quota-cascade/b371d68e6d047f4a6ffef92c391ad7c6427a3a7f/ballots/surplus-a.json\",\"1c857aa025fe1223414612401a6dab73cea5b6bdafb6981e53894600ad69cb92\",]\"method\":\"cast\"}"
+        },
+        "result": {
+          "status": "rollback",
+          "payload": "[EXPECTED] Ballot already submitted"
+        }
+      }
+    ],
+    "validators": [
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      },
+      {
+        "execution_result": "ERROR",
+        "genvm_result": {
+          "stderr": "",
+          "stdout": "",
+          "raw_error": null,
+          "error_code": null,
+          "error_description": null
+        },
+        "mode": "validator",
+        "vote": "agree"
+      }
+    ]
+  },
+  "gaslimit": 3,
+  "nonce": 3,
+  "created_at": "2026-10-17T14:25:28.685838+00:00",
+  "leader_only": false,
+  "execution_mode": "NORMAL",
+  "origin_address": "0x67f9F80e80556f5E3648B71588e73D32d7Fcd86e",
+  "triggered_on": null,
+  "appeal_validators_timeout": false,
+  "sim_config": {
+    "signed_rollup_transaction": "0xf9020903808307a12094b7278a61aa25c888815afc32ad3cc52ff24fe57580b901a427241a9900000000000000000000000067f9f80e80556f5e3648b71588e73d32d7fcd86e000000000000000000000000d6c5bb56eb2a8feb414ec8c2f8458514eb7075260000000000000000000000000000000000000000000000000000000000000005000000000000000000000000000000000000000000000000000000000000000300000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000dbf8d9b8d616046172677315fc0768747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f656873616e6973696c6475722d75782f71756f74612d636173636164652f623337316436386536643034376634613666666566393263333931616437633634323761336137662f62616c6c6f74732f737572706c75732d612e6a736f6e840431633835376161303235666531323233343134363132343031613664616237336365613562366264616662363938316535333839343630306164363963623932066d6574686f6424636173740000000000008301e482a07bb6293727eac67e0c8488174556175975985c7e12f7bc72cd9c421556a4146fa02e4ed771f322773adf82b956431a31417f4e161ca73838ef0c8df26d45df1596"
+  },
+  "value_credited": false,
+  "sender": "0x67f9F80e80556f5E3648B71588e73D32d7Fcd86e",
+  "recipient": "0xD6C5bB56eb2a8feb414EC8c2f8458514eB707526",
+  "tx_id": "0x9ba08eefb5cc69cee909d8bce1bc9c5a970a4c65be2b4bf56e51374af5f3c9dd",
+  "activator": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
+  "last_leader": "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
+  "result_name": "MAJORITY_AGREE",
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1",
+      "0x8a876C3F3a4783Bd123982bcBF3c672dc0239004",
+      "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
+      "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e",
+      "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21"
+    ],
+    "validator_votes_hash": [
+      "0xb983acc7d2cb07efb8c06b4ee0b2c22ef878f61ac022ca5b8fa2a960e2f85962",
+      "0x35ebf75d888980ab33e3676bae4162775c15d0451e39b1adf49c33eaef62c341",
+      "0x5526f5e2fa1b850ab08c0ec21cfd5ff9abe157303d3fc3f2669d7773d87d330f",
+      "0x7599b89422022a90b92dffd0ca47a5231ce16a0f03f8a2640666714fa9de2ebe",
+      "0xd6834e669f8579a29339d91ce0486d81f2366f1c3dc9af76103f66de94e40222"
+    ],
+    "validator_votes": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "type": 2,
+  "status_name": "FINALIZED"
+}
