@@ -4,6 +4,7 @@ import hashlib
 import itertools
 import json
 import re
+import runpy
 from fractions import Fraction
 from pathlib import Path
 import pytest
@@ -241,11 +242,13 @@ def oracle(orders, powers, count, seats):
 
 def test_exhaustive_rankings_against_independent_fraction_oracle():
     run = pure()['count_votes']
+    full_reference = runpy.run_path(str(ROOT / 'scripts/check-state.py'))['reference']
     orders = list(itertools.permutations(range(3))) + [(0,), (1,), (2,), (0, 2)]
     cases = 0
     for ballot_orders in itertools.product(orders, repeat=3):
         for seats in (1, 2):
             result = run(ballot_orders, [6, 3, 2], 3, seats)
+            assert result == full_reference(ballot_orders, [6, 3, 2], 3, seats)
             winners, trace = oracle(ballot_orders, [6, 3, 2], 3, seats)
             assert result['winners'] == winners
             assert [(r['action'], r['candidate'], Fraction(*r['transfer_factor'])) for r in result['rounds']] == trace

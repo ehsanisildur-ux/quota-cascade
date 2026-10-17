@@ -217,10 +217,10 @@ class QuotaCascade(gl.Contract):
             fail('[EXPECTED] Ballot already submitted')
         if not isinstance(url, str) or not re.fullmatch(r'https://raw\.githubusercontent\.com/' + re.escape(self.publisher) + r'/[0-9a-f]{40}/ballots/[a-z0-9-]+\.json', url) or not isinstance(sha256, str) or not re.fullmatch(r'[0-9a-f]{64}', sha256):
             fail('[EXPECTED] Commit-pinned ballot and SHA-256 required')
-        voter, candidates = self.voter_ids[index], list(self.candidates)
+        voter, candidates, election = self.voter_ids[index], list(self.candidates), self.election
 
         def leader():
-            source = acquire(url, sha256, self.election, voter)
+            source = acquire(url, sha256, election, voter)
             return {'source': source, 'decision': interpret(source, candidates)}
 
         def validator(result):
@@ -232,7 +232,7 @@ class QuotaCascade(gl.Contract):
                     except gl.vm.UserError as error:
                         message = getattr(result, 'message', '')
                         return (error.message.startswith('[EXTERNAL]') and error.message == message) or (error.message.startswith('[TRANSIENT]') and isinstance(message, str) and message.startswith('[TRANSIENT]'))
-                source, value = acquire(url, sha256, self.election, voter), result.calldata
+                source, value = acquire(url, sha256, election, voter), result.calldata
                 if not isinstance(value, dict) or set(value) != {'source', 'decision'} or value['source'] != source:
                     return False
                 decision = checked(value['decision'], source, candidates)
