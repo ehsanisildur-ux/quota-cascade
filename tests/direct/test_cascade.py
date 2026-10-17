@@ -289,3 +289,18 @@ def test_constructor_accepts_actual_calldata_address_objects(direct_deploy, acco
     monkeypatch.setattr(loader, '_allocate_contract', allocate)
     c = deploy(direct_deploy, accounts)
     assert [v['address'] for v in c.get_state()['voters']] == ['0x' + a.hex() for a in accounts]
+
+
+@pytest.mark.parametrize('case', ['duplicate-wallet', 'duplicate-id', 'zero-wallet', 'zero-weight', 'large-weight', 'boolean-weight', 'missing-wallet', 'missing-weight'])
+def test_constructor_rejects_invalid_native_roster(direct_deploy, accounts, case):
+    ids, addresses, weights = ['voter-a', 'voter-b', 'voter-c'], list(accounts), [6, 1, 2]
+    if case == 'duplicate-wallet': addresses[1] = addresses[0]
+    if case == 'duplicate-id': ids[1] = ids[0]
+    if case == 'zero-wallet': addresses[0] = bytes(20)
+    if case == 'zero-weight': weights[0] = 0
+    if case == 'large-weight': weights[0] = 21
+    if case == 'boolean-weight': weights[0] = True
+    if case == 'missing-wallet': addresses.pop()
+    if case == 'missing-weight': weights.pop()
+    with pytest.raises(Exception, match='Invalid weighted voter|One to eight voters required'):
+        direct_deploy(str(ROOT / 'contracts/quota_cascade.py'), PUBLISHER, 'SURPLUS', CANDIDATES, ids, addresses, weights, 2)

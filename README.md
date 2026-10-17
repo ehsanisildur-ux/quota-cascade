@@ -24,8 +24,8 @@ genvm-lint check contracts/quota_cascade.py --json
 python -m pytest -q
 ```
 
-The manual GitHub proof workflow creates encrypted disposable CLI accounts, deploys on gasless StudioNet (chain 61999), and uploads sanitized receipts. It verifies execution success, finalized strict-majority agreement, exact source bytes and independent state/count results. A successful CLI banner alone is insufficient.
+The 45 direct tests include actual SDK Address inputs, validator replay and 2000 complete round traces checked against an independent Fraction oracle. The manual GitHub proof workflow creates encrypted disposable CLI accounts, deploys on gasless StudioNet (chain 61999), and uploads sanitized receipts. It verifies execution success, finalized strict-majority agreement, exact source bytes and independent state/count results. A successful CLI banner alone is insufficient.
 
 ## Scope
 
-Ballots and voter wallets are public. The constructor decides eligibility, weights, candidate IDs and tie priority; validators do not establish whether that electorate is legitimate. A voter authorizes a specific published revision by sending its commitment, not by proving who wrote the prose. There is no external election certification, secret voting, coercion resistance, token custody or execution of winners' real-world powers. Synthetic statements demonstrate semantics. No claim of universal architectural originality or review acceptance is made.
+Ballots and voter wallets are public. The constructor decides eligibility, weights, candidate IDs and tie priority; validators do not establish whether that electorate is legitimate. A voter authorizes a specific published revision by sending its commitment, not by proving who wrote the prose. There is no external election certification, secret voting, coercion resistance, token custody or execution of winners' real-world powers. Synthetic statements demonstrate semantics.
